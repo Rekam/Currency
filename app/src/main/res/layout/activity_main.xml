@@ -25,17 +25,17 @@
         android:layout_marginLeft="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
         app:layout_constraintStart_toEndOf="@+id/tv_ntd"
         app:layout_constraintTop_toTopOf="@+id/tv_ntd" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="runResult"
         android:text="Go"
         app:layout_constraintStart_toStartOf="@+id/tv_ntd"
         app:layout_constraintTop_toBottomOf="@+id/ntd" />
@@ -49,8 +49,8 @@
         android:layout_marginTop="20dp"
         android:text="JP"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toStartOf="@+id/result"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
     <TextView
         android:id="@+id/tv_us"
