@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (ntd.getText().toString().trim().equals("")){
         new AlertDialog.Builder(this)
-                .setTitle("Problem")
-                .setMessage("Please enter your NTD amount")
-                .setPositiveButton("OK",null)
+                .setTitle(R.string.problem)
+                .setMessage(R.string.please_enter_ntd)
+                .setPositiveButton(R.string.ok,null)
                 .show();
         } else {
 
@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 ntdNumber = Float.parseFloat(ntd.getText().toString().trim());
                 exchangeRate = 30.9f;
                 new AlertDialog.Builder(this)
-                        .setTitle("Reuslt")
-                        .setMessage("USD is " + ntdNumber * exchangeRate)
-                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.result)
+                        .setMessage(getString(R.string.usd_is) + ntdNumber * exchangeRate)
+                        .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ntd.setText("");
